@@ -16,10 +16,7 @@ dependencies = []
 Homepage = "https://github.com/lim-james/bible-api"
 
 [tool.setuptools]
-packages = ["bible_api"]
+packages = ["bible"]
 
 [tool.setuptools.package-data]
-bible = ["../assets/*.csv"]  
-
-[tool.setuptools.dynamic]
-long_description = {file = ["README.md"]}
+bible = ["assets/*.csv"]  
