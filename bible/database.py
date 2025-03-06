@@ -1,8 +1,9 @@
+import importlib.resources
 from csv import DictReader
 
-def load_bible_from_csv(filepath):
+def load_bible_from_csv(bible_csv):
     data = {}
-    with open(filepath, mode="r", encoding="utf-8") as file:
+    with bible_csv.open("r", encoding="utf-8") as file:
         reader = DictReader(file)
         for row in reader:
             book = row["book"].lower()
@@ -20,5 +21,5 @@ def load_bible_from_csv(filepath):
 
     return data
 
-BIBLE_FLIEPATH = './assets/bible.csv'
-bible_data = load_bible_from_csv(BIBLE_FLIEPATH)
+bible_file = importlib.resources.files("bible").joinpath("assets/bible.csv")
+bible_data = load_bible_from_csv(bible_file)
