@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bible-api"
+name = "bible-core"
 version = "0.1.0"
 description = "Python package for the Catholic Bible"
 readme = "README.md"
@@ -19,4 +19,4 @@ Homepage = "https://github.com/lim-james/bible-api"
 packages = ["bible"]
 
 [tool.setuptools.package-data]
-bible = ["assets/*.csv"]  
+bible = ["assets/*.csv"]
